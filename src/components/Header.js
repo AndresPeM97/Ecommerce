@@ -6,6 +6,8 @@ import {BsBag, BsFillTrash2Fill} from "react-icons/bs"
 import { CarritoContext } from "../contexts/CarritoContext";
 import CarritoItem from "./CarritoItem";
 import {Link} from "react-router-dom"
+import { ProductoContext } from "../contexts/ProductoContext";
+import Home from "../pages/Home";
 
 const Header = ({setToken}) => {
 
@@ -33,6 +35,7 @@ const Header = ({setToken}) => {
             <div className="col-10">
                 <Link to={`/`} className="navbar-brand">Ecommerce</Link>
             </div>
+
             <div className="col-1 text-dark">
                 <button className="navbar-toggler" type="button" onClick={logOutHandler}>LogOut</button>
             </div>

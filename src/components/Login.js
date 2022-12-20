@@ -27,19 +27,20 @@ export const Login = () => {
         })
     }
   return (
-    <div className='container pt-5' style={{height:40+"em"}}>  
+    <div className='container' style={{height:40+"em", paddingLeft:10+"em", paddingTop:5+"em"}}>  
+        <h1>Inicar sesion</h1>
         <form className="row g-3">
         <div className="col-auto">
             <label className="form-label">Email address</label>
             <input type="email" value={userName} onChange={(e) => setUserName(e.target.value)}  className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
+            <button type="submit" onClick={loginHandler} className="btn btn-primary col-6">Ingresar</button>
         </div>
         <div className="col-auto">
             <label className="form-label">Password</label>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" id="inputPassword2" placeholder="Password"/>
         </div>
-        
-        <button type="submit" onClick={loginHandler} className="btn btn-primary mb-3">Ingresar</button>
         </form>
+        
   </div>
   )
 }

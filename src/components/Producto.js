@@ -13,7 +13,7 @@ const Producto = ({producto}) => {
     <div className="col pt-4" key={id} >
         <div className="card" style={{width:15+"em", height:32+"em"}}>
         <Link to={`/producto/${id}`}>
-        <img src={image} className="card-img-top" style={{height:15+"em"}} alt="..."/>
+        <img src={image} className="card-img-top imagen" style={{height:15+"em"}} alt="..."/>
         </Link>
             <div className="card-body">
                 <Link to={`/producto/${id}`}><h5 className="card-title">{title}</h5></Link>

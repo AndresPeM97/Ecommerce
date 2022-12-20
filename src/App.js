@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import {Login} from './components/Login';
 
 
+
 function App() {
 
   const [token, setToken] = useState(localStorage.getItem("userToken") ?? null); 
@@ -24,9 +25,9 @@ function App() {
       <Header setToken={setToken}>
       </Header>
       <Routes>
-        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/login' element={token ? <Login></Login>:<Login token = {token} setToken={setToken}/>}></Route>
         <Route path='/' element={token ? <Home></Home>:<Login token = {token} setToken={setToken}/>}></Route>
-        <Route path='/producto/:id' element={<ProductoDetails></ProductoDetails>}></Route>
+        <Route path='/producto/:id' element={token ? <ProductoDetails></ProductoDetails>:<Login token = {token} setToken={setToken}/>}></Route>
       </Routes>
         <Footer></Footer>
     </Router>

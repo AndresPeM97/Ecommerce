@@ -26,9 +26,9 @@ const ProductoDetails = () => {
             <div className="container">
                 <div className="container row pt-5">
                     <div className="col-5">
-                        <img src={image} style={{height:500+"px"}} />
+                        <img src={image} style={{height:500+"px", width:450+"px"}} />
                     </div>
-                    <div className="col">
+                    <div className="col ps-5">
                         <p className="fs-1 text-light">{title}</p>
                         <p className="fs-2 text-warning">${price}</p>
                         <p className="fs-4 text-secondary">{description}</p>
