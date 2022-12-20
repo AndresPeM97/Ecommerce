@@ -31,7 +31,7 @@ const Header = ({setToken}) => {
     })
 
     return (
-        //Inicia Navbar
+
         <div className="container-fluid pb-5">
             <nav className={`navbar ${isActive ? 'bg-primary' : 'bg-light'} fixed-top`}>
         <div className="container-fluid row">
@@ -56,8 +56,6 @@ const Header = ({setToken}) => {
             <BsBag></BsBag>
           </button>
           </div>
-          //Termina navbar
-          //Inicia la barra lateral
           <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Carrito de compras ({itemCantidad})</h5>
@@ -65,7 +63,7 @@ const Header = ({setToken}) => {
             </div>
             <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end">
-                {//Pasa cada elemento para imprimir en l carrito
+                {
                     Carrito.map(item =>{
         
                         return (
@@ -86,7 +84,6 @@ const Header = ({setToken}) => {
                         </div>
                     </div>
                 </div>
-                //botones para hacer cashout
 
                 <div className="container text-bg-info text-center" style={{height:5+"%" }}>
                     <Link to="/" style={{color: 'inherit', textDecoration: 'inherit'}}>
