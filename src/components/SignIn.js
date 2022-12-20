@@ -40,18 +40,18 @@ export const SignIn = () => {
         })
     }
 
-    
+
   return (
     <div className='container' style={{height:40+"em", paddingLeft:10+"em", paddingTop:5+"em"}}>  
         <h1>Registrarse</h1>
         <form className="row g-3">
         <div className="col-auto">
-            <label className="form-label">Usuario</label>
+            <label className="form-label">Usuario (Sugerido: mor_2314)</label>
             <input type="email" value={userName} onChange={(e) => setUserName(e.target.value)}  className="form-control" id="exampleFormControlInput1" placeholder="Usuario"/>
             <button type="submit" onClick={SignHandler} className="btn btn-primary col-6">Registrar</button>
         </div>
         <div className="col-auto">
-            <label className="form-label">Contraseña</label>
+            <label className="form-label">Contraseña (Sugerido: 83r5^_)</label>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" id="inputPassword2" placeholder="Password"/>
             <Link to="/"><button type="submit" className="btn btn-primary col-6">Volver</button></Link>
         </div>
