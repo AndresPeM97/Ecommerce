@@ -13,7 +13,7 @@ import ProductoDetails from "./pages/ProductoDetails";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {Login} from './components/Login';
-
+import { SignIn } from './components/SignIn';
 
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
       <Header setToken={setToken}>
       </Header>
       <Routes>
+      <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/login' element={token ? <Login></Login>:<Login token = {token} setToken={setToken}/>}></Route>
         <Route path='/' element={token ? <Home></Home>:<Login token = {token} setToken={setToken}/>}></Route>
         <Route path='/producto/:id' element={token ? <ProductoDetails></ProductoDetails>:<Login token = {token} setToken={setToken}/>}></Route>
