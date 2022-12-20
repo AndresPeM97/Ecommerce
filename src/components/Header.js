@@ -34,7 +34,7 @@ const Header = ({setToken}) => {
         <div className="container-fluid pb-5">
             <nav className={`navbar ${isActive ? 'bg-primary' : 'bg-light'} fixed-top`}>
         <div className="container-fluid row">
-            <div className="col-xl-10 col-sm-4">
+            <div className="col-1 col-xl-10 col-sm-7">
                 <ul className="list-group list-group-horizontal">
                     <li style={{listStyleType:"none"}}>
                         <Link to={`/`} className="navbar-brand">
@@ -45,10 +45,8 @@ const Header = ({setToken}) => {
                         <Link to={`/`} className="navbar-brand">Ecommerce</Link>
                     </li>
                 </ul>
-                
             </div>
-
-            <div className="col-1 text-dark">
+            <div className="col-xl-1 col-sm-2 text-dark">
                 <button className="navbar-toggler" type="button" onClick={logOutHandler}>LogOut</button>
             </div>
           <div className="col align-self-center">
