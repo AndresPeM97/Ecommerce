@@ -69,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # Ecommerce
+Para iniciar sesion es necesario un usuario y contraseña incluida en Fake Store API, se recomienda usar la siguientes:
+
+**Usuario:** mor_2314
+**Contraseña:** 83r5^_
