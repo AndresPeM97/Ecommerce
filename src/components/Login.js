@@ -33,12 +33,12 @@ export const Login = () => {
         <h1>Inicar sesion</h1>
         <form className="row g-3">
         <div className="col-auto">
-            <label className="form-label">Usuario</label>
+            <label className="form-label">Usuario (Sugerido: mor_2314)</label>
             <input type="email" value={userName} onChange={(e) => setUserName(e.target.value)}  className="form-control" id="exampleFormControlInput1" placeholder="Usuario"/>
             <button type="submit" onClick={loginHandler} className="btn btn-primary col-6">Ingresar</button>
         </div>
         <div className="col-auto">
-            <label className="form-label">Contraseña</label>
+            <label className="form-label">Contraseña (Sugerido: 83r5^_)</label>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" id="inputPassword2" placeholder="Password"/>
             <Link to="/signin"><button type="submit" className="btn btn-primary col-6" >Registrate</button></Link>
         </div>
