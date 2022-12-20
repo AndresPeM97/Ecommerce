@@ -8,7 +8,7 @@ const Producto = ({producto}) => {
     const { addToCarrito } = useContext(CarritoContext);
 
     const {id, image, category, title, price} = producto;
-
+    //Imprime Tarjetas de bootsrap con titulo, imagen y precio
     return (
     <div className="col pt-4" key={id} >
         <div className="card" style={{width:15+"em", height:32+"em"}}>

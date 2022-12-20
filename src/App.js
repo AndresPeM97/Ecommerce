@@ -17,7 +17,7 @@ import { SignIn } from './components/SignIn';
 
 
 function App() {
-
+  //token de autenticacion de usuario
   const [token, setToken] = useState(localStorage.getItem("userToken") ?? null); 
   
   return <div className='container-fluid'>
@@ -25,7 +25,8 @@ function App() {
       <Header setToken={setToken}>
       </Header>
       <Routes>
-      <Route path='/signin' element={<SignIn></SignIn>}></Route>
+        //Si el usuario no esta autenticado, no puede acceder a las demas rutas
+        <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/login' element={token ? <Login></Login>:<Login token = {token} setToken={setToken}/>}></Route>
         <Route path='/' element={token ? <Home></Home>:<Login token = {token} setToken={setToken}/>}></Route>
         <Route path='/producto/:id' element={token ? <ProductoDetails></ProductoDetails>:<Login token = {token} setToken={setToken}/>}></Route>

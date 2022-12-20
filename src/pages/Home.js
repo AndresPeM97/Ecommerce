@@ -9,19 +9,22 @@ const Home = () => {
     const {productos} = useContext(ProductoContext);
     //console.log(productos);
 
+    //Busca items cuyo nombre y/o categoria sean similares a lo que se escriba en el buscador
     const [filtro="", setFiltro] = useState("")
-
     let ProductosFiltrados;
-
+    //Si hay texto en el formulario, hace el filtrado de acuerdo a lo que escriba el usuario
     if (filtro !==""){
         ProductosFiltrados = productos.filter(item => {
             console.log((item.category).search(filtro))
         return ((item.category).toLowerCase().search(filtro.toLowerCase()) === 0 || (item.title).toLowerCase().search(filtro.toLowerCase())===0);
     });
-    } else {
+    }
+    //Si no hay texto, muestra todos 
+    else {
         ProductosFiltrados = productos;
     }
 
+    //Realiza el filtrado y envia los datos filtrados
     return (
     <div className="container-fluid">
         <Hero></Hero>

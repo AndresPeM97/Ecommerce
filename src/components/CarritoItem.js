@@ -1,12 +1,17 @@
 import React, { useContext } from "react";
+//Importar iconos
 import { IoMdAdd, IoMdClose, IoMdRemove } from "react-icons/io";
+//Importar contexto del carrito
 import { CarritoContext } from "../contexts/CarritoContext";
 
 import { Link } from "react-router-dom";
 
 const CarritoItem = ({item}) => {
+    //elementos recibidos de el contexto de carrito
     const {removeCarrito, incrementarCarrito, decrementarCarrito} = useContext(CarritoContext);
     const {id, title, image, price, amount} = item;
+
+    //retorna cada elemento del carrito de compars, incluyendo sus funciones para incrementar y borrar elementos
     return (
         <li className="list-item pt-2">
             <ul className="list-group list-group-horizontal">

@@ -1,5 +1,5 @@
 import React from "react";
-
+//Banner
 const Hero = () => {
     return(
     <div className="w-auto" style={{height:400+"px",backgroundImage: `url("https://static.vecteezy.com/system/resources/previews/013/934/063/non_2x/merry-christmas-banner-winter-landscape-background-snow-product-display-cylindrical-shape-vector.jpg")`}}>

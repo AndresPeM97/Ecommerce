@@ -6,7 +6,7 @@ export const ProductoContext = createContext();
 
 const ProductoProvider = ({children}) => {
     const [productos, setProductos] = useState([]);
-
+    //Consulta y descarga todos los productos
     useEffect(()=> {
 
         const fetchProductos = async () => {
@@ -17,6 +17,7 @@ const ProductoProvider = ({children}) => {
         fetchProductos();
 
     }, [])
+    //Envia los productos consultados
     return <ProductoContext.Provider value={{productos}}>{children}</ProductoContext.Provider>;
 };
 

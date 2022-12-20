@@ -8,6 +8,8 @@ export const SignIn = () => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
 
+    //Envia el formulario para ser registrado, el servidor responde con un objeto mostrando los datos
+
     const SignHandler = ({token, setToken}) =>{
         axios( {
             url:"https://fakestoreapi.com/users",
@@ -31,7 +33,7 @@ export const SignIn = () => {
                     },
                     phone:"telefono",
         }).then(res=> {
-            console.log(res.data);
+            console.log(res.data.token);
             //setToken(res.data.token);
             localStorage.setItem("userToken", res.data.token);
         }).catch(err=>{
@@ -40,7 +42,7 @@ export const SignIn = () => {
         })
     }
 
-
+//Formulario de registro de usuario
   return (
     <div className='container' style={{height:40+"em", paddingLeft:10+"em", paddingTop:5+"em"}}>  
         <h1>Registrarse</h1>

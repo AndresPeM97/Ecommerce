@@ -11,6 +11,8 @@ const ProductoDetails = () => {
         return item.id === parseInt(id);
     });
 
+    //SI aun no carga o no encuentra el producto seleccionado
+
     if(!product){
         return(
             <section className="text-center" style={{height:1000+"px" ,fontSize:50+"px"}}>
@@ -21,6 +23,8 @@ const ProductoDetails = () => {
 
     const {title, price, description, image} = product;
 
+
+    //imprime los datos mas relevantes del articulo consultado
     return (
         <section style={{fontSize:50+"px"}}>
             <div className="container">

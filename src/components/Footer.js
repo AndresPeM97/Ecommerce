@@ -1,5 +1,5 @@
 import React from "react";
-
+//Despliega el Footer
 const Footer = () => {
     return( 
         <div className="pt-3">

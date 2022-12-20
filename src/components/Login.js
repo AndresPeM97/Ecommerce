@@ -8,6 +8,7 @@ export const Login = () => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('')
 
+    //Consulta los usuarios en FakeStoreApi
     const loginHandler = ({token, setToken}) =>{
         axios( {
             url:"https://fakestoreapi.com/auth/login",
@@ -27,7 +28,7 @@ export const Login = () => {
         })
     }
 
-
+    //Formulario para introducir usuario y contraseñæ
   return (
     <div className='container' style={{height:40+"em", paddingLeft:10+"em", paddingTop:5+"em"}}>  
         <h1>Inicar sesion</h1>
