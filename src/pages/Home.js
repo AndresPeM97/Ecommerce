@@ -21,7 +21,6 @@ const Home = () => {
     } else {
         ProductosFiltrados = productos;
     }
-    
 
     return (
     <div className="container-fluid">

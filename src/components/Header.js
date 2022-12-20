@@ -8,6 +8,7 @@ import CarritoItem from "./CarritoItem";
 import {Link} from "react-router-dom"
 import { ProductoContext } from "../contexts/ProductoContext";
 import Home from "../pages/Home";
+import Icono from "../img/icono.png"
 
 const Header = ({setToken}) => {
 
@@ -29,11 +30,22 @@ const Header = ({setToken}) => {
     })
 
     return (
+        
         <div className="container-fluid pb-5">
             <nav className={`navbar ${isActive ? 'bg-primary' : 'bg-light'} fixed-top`}>
         <div className="container-fluid row">
             <div className="col-10">
-                <Link to={`/`} className="navbar-brand">Ecommerce</Link>
+                <ul className="list-group list-group-horizontal">
+                    <li style={{listStyleType:"none"}}>
+                        <Link to={`/`} className="navbar-brand">
+                            <img src={Icono} alt="" />
+                        </Link>  
+                    </li>
+                    <li className="pt-1" style={{listStyleType:"none"}}>
+                        <Link to={`/`} className="navbar-brand">Ecommerce</Link>
+                    </li>
+                </ul>
+                
             </div>
 
             <div className="col-1 text-dark">
