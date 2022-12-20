@@ -27,7 +27,10 @@ const Home = () => {
     //Realiza el filtrado y envia los datos filtrados
     return (
     <div className="container-fluid">
-        <Hero></Hero>
+        <div className="pt-5 pt-md-4">
+                    <Hero></Hero>
+        </div>
+
         <div className=" pt-4">
             <input type="text" value={filtro} onChange={(e) => setFiltro(e.target.value)} className="form-control" id="exampleFormControlInput1" placeholder="Escribe el nombre o categoria del producto que deseas buscar"/>
         </div>
