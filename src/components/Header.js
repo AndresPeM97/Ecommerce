@@ -34,7 +34,7 @@ const Header = ({setToken}) => {
         <div className="container-fluid pb-5">
             <nav className={`navbar ${isActive ? 'bg-primary' : 'bg-light'} fixed-top`}>
         <div className="container-fluid row">
-            <div className="col-10">
+            <div className="col-xl-10 col-sm-4">
                 <ul className="list-group list-group-horizontal">
                     <li style={{listStyleType:"none"}}>
                         <Link to={`/`} className="navbar-brand">
